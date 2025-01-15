@@ -25,6 +25,14 @@ class MynewController extends AbstractController
     {
         return new Response("<h1>Le numéro est : $number</h1>");
     }
+    #[Route('/twig-example', name: 'app_twig_example')]
+    public function twigExample(): Response
+    {
+    return $this->render('mynew/index.html.twig', [
+        'message' => 'Bienvenue sur Twig avec Symfony',
+    ]);
+}
+
 }
 
 
